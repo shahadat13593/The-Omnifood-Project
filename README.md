@@ -1,5 +1,6 @@
 # The-Omnifood-Project
   <hr />
   <br>
-## Shahadat Hossain
-## Email: shahadat15-13593@diu.edu.bd
+  <hr /><br>
+    <h2>Shahadat Hossain</h2>
+    <h2>Email: shahadat15-13593@diu.edu.bd</h2>
