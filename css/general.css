@@ -1,0 +1,298 @@
+/* *
+*--- 01 TYPOGRAPHY SYSTEM 
+*FONT SIZE SYSTEM (px)
+? --   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /48/ 52 / 62 / 74 / 86 / 98
+
+*- Font-Weight:
+Default: 400
+medium: 500
+semi-bold: 600
+bold: 700
+
+*- Line-heightL:
+  Default: 1
+  h1: 1.05
+  h2:1.1
+  p: 1.6
+
+  *-- Letter spacing
+  -0.5px
+  0.75px
+
+
+
+
+*--- 02 Color
+   Primary: #e67e22
+
+*- Tints:
+#fdf2e9
+#f8d8bd	
+#eb984e
+
+*- shades:
+#cf711f
+*- Accents
+*- Greys:
+#555
+#333
+#6f6f6f
+#888
+#767676
+
+*--- 05 Shadows 
+ 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+*--- 06 Border-radius
+Default: 9px
+MEAL CARD: 11PX
+
+*--- 07 WhiteSpace
+*- SPACING SYSTEM (px)
+? --   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/**
+*?------------------ Primary setup styes ---------------------
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.6%;
+
+  overflow-x: hidden;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  overflow-x: hidden;
+}
+
+/**
+*?------------------ Container---------------------
+ */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem !important;
+}
+
+/**
+*?------------------ grids ---------------------
+ */
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-col {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+/**
+*?------------------ Headings  ---------------------
+ */
+
+.primary-heading,
+.secondary-heading,
+.tertiary-heading {
+  color: #333 !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.primary-heading {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.05;
+}
+.secondary-heading {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+  line-height: 1.2;
+}
+.tertiary-heading {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2.4rem;
+}
+
+.sub-heading {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  color: #cf711f;
+  margin-bottom: 3rem;
+}
+
+/**
+*?------------------ Buttons  ---------------------
+ */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 9px;
+
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #333;
+  background-color: #fff;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.recipes-link:link,
+.recipes-link:visited {
+  display: inline-block;
+  margin-top: 4.8rem;
+  font-size: 1.8rem;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: solid 1px currentColor;
+  padding-bottom: 0.2rem;
+
+  transition: all 0.3s;
+}
+.recipes-link:hover,
+.recipes-link:active {
+  border-bottom: 1px solid transparent;
+  color: #cf711f;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: #777;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #333;
+}
+
+/**
+*?------------------ List styles---------------------
+ */
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.8rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.list-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #e67e22;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/**
+*?------------------ Tag styles---------------------
+ */
+.tag-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.tag {
+  background-color: #51cf66;
+
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.tag--color-1 {
+  background-color: #94d82d;
+}
+.tag--color-2 {
+  background-color: #fcc419;
+}
+
+/**
+*?------------------ Singles styles---------------------
+ */
+
+.margin-right {
+  margin-right: 1.6rem;
+}
+.margin-bottom {
+  margin-bottom: 4.8rem !important;
+}
+.text-center {
+  text-align: center;
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+strong {
+  font-weight: 500;
+  color: #555;
+}
